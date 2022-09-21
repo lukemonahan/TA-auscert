@@ -7,7 +7,7 @@ import datetime
 import json
 
 import modinput_wrapper.base_modinput
-from solnlib.packages.splunklib import modularinput as smi
+from splunklib import modularinput as smi
 
 
 
@@ -33,7 +33,7 @@ class ModInputauscert_phishing_feed(modinput_wrapper.base_modinput.BaseModInput)
     def get_scheme(self):
         """overloaded splunklib modularinput method"""
         scheme = super(ModInputauscert_phishing_feed, self).get_scheme()
-        scheme.title = ("AusCERT Phishing Feed")
+        scheme.title = ("AusCERT phishing feed")
         scheme.description = ("Go to the add-on\'s configuration UI and configure modular inputs under the Inputs menu.")
         scheme.use_external_validation = True
         scheme.streaming_mode_xml = True
@@ -46,7 +46,7 @@ class ModInputauscert_phishing_feed(modinput_wrapper.base_modinput.BaseModInput)
         For customized inputs, hard code the arguments here to hide argument detail from users.
         For other input types, arguments should be get from input_module. Defining new input types could be easier.
         """
-        scheme.add_argument(smi.Argument("auscert_api_key", title="AusCERT API Key",
+        scheme.add_argument(smi.Argument("auscert_api_key", title="AusCERT API Key ",
                                          description="",
                                          required_on_create=True,
                                          required_on_edit=False))
