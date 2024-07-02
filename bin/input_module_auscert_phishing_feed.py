@@ -20,7 +20,7 @@ def collect_events(helper, ew):
 
     helper.log_info("Retrieving AusCERT 7-day phishing feed")
 
-    url = "https://www.auscert.org.au/api/v1/malurl/phishing-7-txt"
+    url = "https://portal.auscert.org.au/api/v1/malurl/phishing-7-txt"
     headers = {'API-Key': opt_auscert_api_key}
 
     # The following examples send rest requests to some endpoint.
